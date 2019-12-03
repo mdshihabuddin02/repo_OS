@@ -1,0 +1,155 @@
+Problem 01:
+##################
+echo "Enter value of a";
+read a
+echo "Enter value of b";
+read b
+c= expr $a + $b
+echo $c
+
+##################
+
+
+Problem 03:
+
+echo “enter basic salary”
+read bs
+hra=$(( $bs * 10 / 100 ))
+echo $hra
+ta=$(( $bs * 15 / 100 ))
+echo $ta
+da=$(( $bs * 2 / 100 ))
+echo $da
+tax=$(( $bs * 5 / 100 ))
+echo $tax
+pf=$(( $bs * 10 / 100 ))
+echo $pf
+add=$(( $hra + $ta + $da ))
+echo $add
+ded=$(( $tax + $pf ))
+echo $ded
+netsal=$(( $bs + $add - $ded ))
+echo "net salary is $netsal"
+
+##################
+
+Problem 04:
+
+echo "Enter Product price"
+read pp
+if [ $pp -lt 1000 ]
+then
+tax=$(( $pp * 2 / 100 ))
+disc=$(( $pp * 10 / 100 ))
+else
+tax=$(( $pp * 5 / 100 ))
+disc=$(( $pp * 20 / 100 ))
+
+fi
+
+pa=$(( $pp + $tax - $disc ))
+
+echo "Ammount paid: $pa"
+
+###################################
+
+Problem 05:
+
+echo -n "Enter a number: "
+read a
+echo -n "Enter another Number: "
+read b
+echo -n "Enter an operator: "
+read c
+case $c in
++)x=$(( $a + $b )) ;;
+-)x=$(( $a - $b )) ;;
+/)x=$(( $a / $b )) ;;
+*)x=$(( $a * $b )) ;;
+esac
+echo $x
+
+##################
+
+Problem 06:
+
+echo "Enter a String"
+read st
+echo "${#st} is the length of your string"
+
+##################
+
+Problem 07:
+
+echo "Enter a Year"
+read yr
+
+lpYr=$"$yr % 4"
+if [[ $lpYr -eq 0 ]]
+then
+echo "$yr is Leap Year"
+else
+echo "$yr is not Leap Year"
+fi
+
+##################
+
+Problem 08:
+
+echo "Enter Product price"
+read pp
+if [ $pp -lt 1000 ]
+then
+tax=$(( $pp * 2 / 100 ))
+disc=$(( $pp * 10 / 100 ))
+else
+tax=$(( $pp * 5 / 100 ))
+disc=$(( $pp * 20 / 100 ))
+
+fi
+
+pa=$(( $pp + $tax - $disc ))
+
+echo "Ammount paid: $pa"
+
+##################
+
+Problem 09:
+
+echo "Enter First String"
+read str1
+
+echo "Enter Second String"
+read str2
+
+str3="$str1 $str2"
+
+echo "After concate $str3"
+
+########################
+
+Problem Number:
+echo "Enter a Number";
+read a
+for i in 1 2 3 4 5 6 7 8 9 10
+do
+t=$(( $a * $i ))
+echo $t
+i=$(( $i + 1 ))
+done
+
+Problem 20:
+
+
+a=2
+echo "Enter Vlaue"
+read n
+
+while [ $a -le $n ]
+do 
+echo -n " $a "
+
+a=$(( $a + 2))
+
+done
+echo ""
